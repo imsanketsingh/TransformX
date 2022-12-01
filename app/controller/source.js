@@ -137,7 +137,7 @@ export const getSource = async (req, res) => {
       },
     ],
   };
-  // let strigifiedData = JSON.stringify(res.params.map);
+  // let strigifiedData = JSON.stringify(map);
   // const py = spawn("python", ["./final.py", strigifiedData]);
   // const resultstring = "";
   // const resultData = "";
@@ -147,7 +147,8 @@ export const getSource = async (req, res) => {
   // py.stdout.on("end", function () {
   //   resultData = JSON.parse(resultstring);
   // });
-  console.log(source);
+  // console.log(source);
+  // console.log(resultData);
   //   var result = transform({ source }, { map });
 
   //   dummy(source, map);
@@ -161,13 +162,14 @@ export const getSource = async (req, res) => {
   //     regin: "Japan",
   //     pakistan: "fasd",
   //   };
-  const final = transform(source, map);
-  console.log(final);
+  // const final = transform(source, resultData);
+  // console.log(final);
+  // console.log(res);
   try {
     return res.json("hello");
   } catch (error) {
     console.log(error);
   }
-};;;;;
+};
 
 export default router;

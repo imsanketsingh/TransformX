@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import InputBox from "./inputBox";
-import Papa from "papaparse"
+import Papa from "papaparse";
 import ResultPage from "./resultPage";
 import axios from "axios";
 // const spawn =require('child_process').spawn
@@ -87,7 +87,7 @@ const HomePage = () => {
     const response = await fetch("http://localhost:3000/source", {
       method: "POST",
       mode: "no-cors",
-      body: jsonfile,
+      body: "tera baap aaya",
     });
     console.log(response);
   }
@@ -108,45 +108,18 @@ const HomePage = () => {
   if (issubmit === 0) {
     return (
       <>
-        <div style={{ height: "100px" }}></div>
-        <div style={{ display: "flex" }}>
-          <div style={{ width: "60%" }}>
-            <div
-              style={{
-                backgroundColor: "#f8ecbc",
-                width: "80%",
-                margin: "auto",
-                border: "2px solid black",
-                borderRadius: "20px",
-                fontSize: "25px",
-              }}
-            >
-              <h3 style={{ textAlign: "center", fontSize: "35px" }}>Steps:</h3>
-              <ol>
-                <li style={{ marginTop: linespace }}>
-                  Upload the Source JSON and the Mapping files. Supported
-                  extension for the Mapping file is "csv"{" "}
-                </li>
-                <br />
-                <li style={{ marginTop: linespace }}>Click on "Proceed".</li>
-                <br />
-                <li style={{ marginTop: linespace }}>
-                  A new page will open with the newly converted JSON file and
-                  the respective Code.
-                </li>
-                <br />
-                <li style={{ marginTop: linespace }}>
-                  User may download the JSON file and the Code.
-                </li>
-              </ol>
-            </div>
-          </div>
+        <div style={{ height: "50px" }}></div>
+        
+        <div style={{ display: "flex",
+              flexDirection: "column"
+             }}>
           <div
             style={{
-              width: "40%",
+              width: "60%",
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "row",
               alignItems: "center",
+              justifyContent:"space-around",
               margin: "auto",
               height: "100%",
             }}
@@ -158,18 +131,18 @@ const HomePage = () => {
             />
             <div style={{ height: "50px" }}></div>
             <InputBox text="Mapping File" type=".csv" parsing={parseData} />
-            <div
-              style={{ marginTop: "5%", width: "100%", textAlign: "center" }}
+          </div>
+          <div
+              style={{ marginTop: "2%", width: "100%", textAlign: "center" }}
             >
               <Button
                 variant="contained"
-                style={{ margin: "auto", width: "30%" }}
+                style={{ margin: "auto", width: "10%" }}
                 onClick={(e) => changePage(e)}
               >
                 Proceed
               </Button>
             </div>
-          </div>
         </div>
       </>
     );
