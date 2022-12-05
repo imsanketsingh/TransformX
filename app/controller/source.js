@@ -5,7 +5,7 @@ const router = express.Router();
 
 // var transform = require("node-json-transform").transform;
 import { transform } from "node-json-transform";
-import spawn from "child_process";
+// import { PythonShell } from "python-shell";
 // or
 // var { transform } = require("node-json-transform");
 
@@ -21,8 +21,8 @@ import spawn from "child_process";
 // };
 
 export const getSource = async (req, res) => {
-    console.log(req);
-  const source = {
+  console.log(req);
+  let source = {
     id: "122-34-6543",
     region: "NA",
     firstName: "Leanne",
@@ -137,36 +137,44 @@ export const getSource = async (req, res) => {
       },
     ],
   };
-  // let strigifiedData = JSON.stringify(map);
-  // const py = spawn("python", ["./final.py", strigifiedData]);
-  // const resultstring = "";
-  // const resultData = "";
-  // py.stdout.on([source, strigifiedData], function (stdData) {
-  //   resultstring += stdData.toString();
-  // });
-  // py.stdout.on("end", function () {
-  //   resultData = JSON.parse(resultstring);
-  // });
-  // console.log(source);
-  // console.log(resultData);
-  //   var result = transform({ source }, { map });
 
-  //   dummy(source, map);
-  //   const temp = {
-  //     id: "1",
-  //     regin: "India",
-  //     pakistan: "fasd",
-  //   };
-  //   const temp2 = {
-  //     id: "34",
-  //     regin: "Japan",
-  //     pakistan: "fasd",
-  //   };
-  // const final = transform(source, resultData);
+  // stringifiedData = JSON.stringify(stringifiedData);
+  // source = JSON.stringify(source);
+  // let options = {
+  //   scriptPath: "./controller/",
+  //   args: [source, stringifiedData],
+  //   mode: 'text',
+  // };
+  // let finaldata;
+
+// let pyshell= new PythonShell("final.py", options);
+// var s =await new pyshell.on('message', function (message) {
+//   // received a message sent from the Python script (a simple "print" statement)
+//   finaldata=message;
+// });
+//   console.log(s.message);
+
+  //console.log(resultstring);
+  
+
+  // var result = transform({ source }, { map });
+
+  // dummy(source, map);
+  // const temp = {
+  //   id: "1",
+  //   regin: "India",
+  //   pakistan: "fasd",
+  // };
+  // const temp2 = {
+  //   id: "34",
+  //   regin: "Japan",
+  //   pakistan: "fasd",
+  // };
+  const final = transform(source, map);
   // console.log(final);
-  // console.log(res);
+  console.log(res);
   try {
-    return res.json("hello");
+    return res.json("vinay mc");
   } catch (error) {
     console.log(error);
   }
