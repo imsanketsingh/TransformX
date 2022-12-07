@@ -5,9 +5,16 @@
   "dependencies": {
     "body-parser": "^1.20.1",
     "child_process": "^1.0.2",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "mongoose": "^5.9.29",
     "node-json-transform": "^1.1.2",
+    "nodemon": "^2.0.20",
     "python-shell": "^3.0.1"
-  }
+  },
+  "scripts":
+    { 
+        "start": "node ./bin/www",
+        "start-dev": "nodemon ./app.js"
+    }
 }

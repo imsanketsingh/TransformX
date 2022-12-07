@@ -73,7 +73,6 @@ data=data
 # ]
 
 li=[]
-data=data['check']
 # for i in range(len(data)-1):
 #    data[i]=dict(data[i])
 for i in range(len(data)-1):
@@ -346,6 +345,6 @@ newStr= detailsInString
 newStr="""{
   "item": {
     """+newStr+"""},""" +"""
-    operate:["""+strrun+"""]}"""
+    "operate":["""+strrun+"""]}"""
 
 print(newStr)
