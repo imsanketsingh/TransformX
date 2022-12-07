@@ -77,4 +77,4 @@ Create an application that will do below
 [contributors-url4]: https://www.linkedin.com/in/prakhartomar53/
 [contributors-url5]: https://www.linkedin.com/in/divy-goyal/
 [contributors-url6]: https://www.linkedin.com/in/rohitbishla/
-[canva-url]: https://www.canva.com/design/DAFTILlf_XE/UVbaZyQnBFmsyjjHRuuNgQ/view?utm_content=DAFTILlf_XE&utm_campaign=designshare&utm_medium=link&utm_source=publishpresent
+[canva-url]: https://www.canva.com/design/DAFS3yxCXzE/RnURgu4sTkfu4JO1hSVWPQ/edit?utm_content=DAFS3yxCXzE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
